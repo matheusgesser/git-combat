@@ -6,11 +6,11 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/matheusgesser/gitcombat?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/matheusgesser/gitcombat?style=for-the-badge)
 
-<img src="#" alt="Imagem demonstrativa Desktop">
+<img width=20% src="https://www.webitrs5.net/images/comingsoon-square.png" alt="Imagem demonstrativa Desktop">
 
-> Adivinhe, através de um duelo de repositórios, qual possui mais estrelas ⭐
+> Adivinhe, através de um duelo de repositórios, qual possui mais estrelas.
 
-**Acesse: <a href="#">Soon</a>**
+**Acesse: <a href="#" disabled>Em breve</a>**
 
 ## 💻 **Tecnologias**
 
@@ -19,5 +19,3 @@
 <img src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white' /><img src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white' />
 <br>
 <img src='https://img.shields.io/badge/GitHub API-222?style=for-the-badge&logo=git&logoColor=white' />
-
-## 🚀 **Funcionalidades**
