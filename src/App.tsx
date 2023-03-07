@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import { useRepos } from './hooks'
+
 import './styles/base.css'
 import './styles/home.css'
 import './styles/animations.css'
 
 export default function App() {
   const [showGame, setShowGame] = useState<boolean>(false)
-  const [repos, setRepos] = useState([])
+  const [repos, setRepos, allRepos] = useRepos(100)
 
   return (
     <main>
