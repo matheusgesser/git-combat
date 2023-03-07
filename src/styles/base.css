@@ -1,4 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Permanent+Marker&family=Sono&display=swap');
+
+:root {
+/* Color Palette */
+  --color-eerie-black: #222222;
+  --color-penn-red: #960200;
+  --color-mint-cream: #f2f7f2;
+  --color-gray: #7c7a7a;
+  --color-slate-gray: #7d8491;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background: #222;
+  background: var(--color-eerie-black);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: var(--color-mint-cream);
+  font-family: 'Kanit', sans-serif;
+  user-select: none;
 }

@@ -1,0 +1,67 @@
+main strong {
+  font-size: clamp(3rem, 6vw, 10vw);
+  color: var(--color-penn-red);
+  font-weight: 900;
+  text-shadow: 3px 3px #800000, 6px 6px #600000;
+  transition: 0.3s;
+}
+
+main strong:hover {
+  transform: scale(1.1);
+}
+
+main p {
+  width: 50vw;
+  text-align: center;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+main p:hover {
+  transform: scale(1.05);
+}
+
+main p:last-of-type {
+  opacity: 1;
+}
+
+main button {
+  border: 2px inset #fff;
+  border-radius: 8px;
+  background: var(--color-penn-red);
+  font-size: 2rem;
+  padding: 0.25rem 2rem;
+  cursor: pointer;
+  color: var(--color-mint-cream);
+  text-shadow: 1px 1px #800000, 2px 2px #600000;
+  font-family: 'Kanit', sans-serif;
+  box-shadow: 0 4px #fff;
+  transition: 0.3s;
+}
+
+main button:hover {
+  transform: scale(1.2);
+}
+
+main:nth-child(1) {
+  animation: float infinite 3s ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) skewY(-3deg);
+  }
+  50% {
+    transform: translateY(-15px) skewY(-3deg);
+  }
+  100% {
+    transform: translateY(0) skewY(-3deg);
+  }
+}
+
+@media (max-width:600px) {
+  main p {
+    width: 90vw;
+  }
+}
