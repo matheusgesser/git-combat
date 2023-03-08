@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useRepos } from './hooks'
+import { Game } from './components'
 
 import './styles/base.css'
 import './styles/home.css'
@@ -25,10 +26,10 @@ export default function App() {
         </>
       )}
       {showGame && (
-        // TODO: Create Game Component
-        <>
-          <h1>Game</h1>
-        </>
+        <Game
+          repoState={[repos, setRepos]}
+          originalList={allRepos}
+          setShowGame={setShowGame} />
       )}
     </main>
   )
