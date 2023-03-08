@@ -1,9 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { githubClient } from "../api";
 
-function randomSince() {
-  Math.floor(Math.random() * 1000000)
-}
+const randomSince = Math.floor(Math.random() * 1000000)
 
 async function fetchRepos( amount:number, setters:Dispatch<SetStateAction<any[]>>[] ) {
   const res = await githubClient.request("GET /search/repositories", {
