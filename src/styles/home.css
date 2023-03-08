@@ -22,8 +22,10 @@ main p:hover {
   transform: scale(1.05);
 }
 
-main p:last-of-type {
+main p.pulsate-bck {
   opacity: 1;
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
 }
 
 main button {
