@@ -27,7 +27,7 @@ export default function useRepos(amount:number): UseReposReturnType {
 
   useEffect(() => {
     fetchRepos(amount, [setAllRepos, setRepositories])
-  }, [repositories, setRepositories, allRepos])
+  }, [])
 
   return [repositories, setRepositories, allRepos]
 }

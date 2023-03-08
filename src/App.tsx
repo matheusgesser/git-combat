@@ -6,9 +6,12 @@ import './styles/base.css'
 import './styles/home.css'
 import './styles/animations.css'
 
+import correctAnswerAudio from './assets/correct-answer.wav'
+import wrongAnswerAudio from './assets/wrong-answer.wav'
+
 export default function App() {
   const [showGame, setShowGame] = useState<boolean>(false)
-  const [repos, setRepos, allRepos] = useRepos(100)
+  const [repos, setRepos, allRepos] = useRepos(30)
 
   return (
     <main>
@@ -31,6 +34,8 @@ export default function App() {
           originalList={allRepos}
           setShowGame={setShowGame} />
       )}
+      <audio id='correct-answer-audio' src={correctAnswerAudio} ></audio>
+      <audio id='wrong-answer-audio' src={wrongAnswerAudio} ></audio>
     </main>
   )
 }

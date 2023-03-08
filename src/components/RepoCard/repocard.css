@@ -1,7 +1,6 @@
 section.repo {
   background: var(--color-eerie-black);
-  height: 45%;
-  width: 100%;
+  width: 40%;
   padding: 1.5rem;
   border-radius: 1.5rem;
   display: flex;
@@ -17,19 +16,20 @@ section.repo:hover {
 }
 
 section.repo h2.repo-title {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: var(--color-mint-cream);
   text-shadow: 1px 1px #000;
 }
 
 section.repo h2.repo-title > strong {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--color-penn-red);
   font-weight: 900;
 }
 
 section.repo p.repo-desc {
   font-size: 1rem;
+  text-shadow: 1px 1px #000;
 }
 
 section.repo section.repo-header {
@@ -40,6 +40,7 @@ section.repo section.repo-header {
 
 section.repo section.repo-header img.avatar {
   width: 12%;
+  height: 12%;
   object-fit: cover;
   border-radius: 5px;
   border: 2px solid var(--color-penn-red);
@@ -69,15 +70,22 @@ aside.info ul.topics {
   max-height: 3rem;
   height: 3rem;
   overflow: hidden;
-  width: 70%;
+  width: 90%;
   margin-left: auto;
 }
 
 li.topic {
-  background: var(--color-slate-gray);
+  background: #555;
   height: 1.25rem;
   padding: 0.3rem 0.4rem;
   border-radius: 0.5rem;
   font-size: 0.8rem;
   color: var(--color-mint-cream);
+  text-shadow: 1px 1px #000;
+}
+
+@media (max-width:800px) {
+  section.repo {
+    width: 100%;
+  }
 }
