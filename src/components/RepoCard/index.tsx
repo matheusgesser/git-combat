@@ -1,58 +1,59 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { BsBook } from "react-icons/bs"
+import { FaCodeBranch, FaDownload, FaStar } from "react-icons/fa"
+import { TbPageBreak } from "react-icons/tb"
+import { VscCommentDiscussion, VscIssues, VscProject } from "react-icons/vsc"
+import { truncate } from '../../utils'
+import './repocard.css'
 
-interface GameProps {
-  repoState: [Repo[],React.Dispatch<React.SetStateAction<Repo[]>>]
-  originalList: Repo[]
-  setShowGame: React.Dispatch<React.SetStateAction<boolean>>
+interface RepoCardProps {
+  content: Repo
+  handler: (r: Repo) => void
 }
 
-const Game: React.FC<GameProps> = ({repoState, originalList, setShowGame}) => {
-
-  const [over, setOver] = useState<boolean>(false)
-  const [repo1, setRepo1] = useState<Repo | null>(null)
-  const [repo2, setRepo2] = useState<Repo | null>(null)
-
-  useEffect(() => {
-    setRepo1(originalList[0])
-    setRepo2(originalList[1])
-  }, [])
-
+const RepoCard: React.FC<RepoCardProps> = ({ content, handler }) => {
   return (
-    <section className='game'>
-      {over ? (
-        <aside className='score'></aside>
-      ) : (
-        repo1 && repo2 && (
-          <section className='repos'>
-            <h1 className='title'>
-              Which one wins the star battle?
-            </h1>
-
-            <section className="container">
-              {/* // TODO: Create Component for the Repo */}
-              <h1>
-                {repo1.owner.login}/{repo1.name}
-              </h1>
-            </section>
-
-            <section className="dashboard">
-              <h4>Round 1</h4>
-              <span>VS</span>
-              <button>BACK</button>
-              <button>NEXT</button>
-            </section>
-
-            <section className="container">
-              <h1>
-                {repo2.owner.login}/{repo2.name}
-              </h1>
-            </section>
-
-          </section>
-        )
-      )}
+    <section className='repo' onClick={() => handler(content)}>
+      <section className="repo-header">
+        <img className='avatar' src={content.owner.avatar_url} />
+        <h2 className='repo-title'>
+          {content.owner.login}/<strong>{content.name}</strong>
+        </h2>
+      </section>
+      <p className='repo-desc'>{truncate(content.description, 72)}</p>
+      <aside className="info">
+        <ul className="topics">
+          {content.topics.map(topic => (
+            <li className='topic' key={topic}>{topic}</li>
+          ))}
+        </ul>
+      </aside>
+      <section className="has">
+        <ul className='booleans'>
+          <li className='item'>
+            <TbPageBreak className={`item-${content.has_pages}`} />
+          </li>
+          <li className='item'>
+            <VscIssues className={`item-${content.has_issues}`} />
+          </li>
+          <li className='item'>
+            <VscCommentDiscussion
+              className={`item-${content.has_discussions}`}
+            />
+          </li>
+          <li className='item'>
+            <BsBook className={`item-${content.has_wiki}`} />
+          </li>
+          <li className='item'>
+            <FaDownload className={`item-${content.has_downloads}`} />
+          </li>
+          <li className='item'>
+            <VscProject className={`item-${content.has_projects}`} />
+          </li>
+        </ul>
+      </section>
     </section>
   )
 }
 
-export default Game
+export default RepoCard
