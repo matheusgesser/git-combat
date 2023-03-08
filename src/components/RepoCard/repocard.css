@@ -1,0 +1,83 @@
+section.repo {
+  background: var(--color-eerie-black);
+  height: 45%;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: 2rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #111;
+}
+
+section.repo:hover {
+  background: var(--color-gray);
+}
+
+section.repo h2.repo-title {
+  font-size: 1.1rem;
+  color: var(--color-mint-cream);
+  text-shadow: 1px 1px #000;
+}
+
+section.repo h2.repo-title > strong {
+  font-size: 1.5rem;
+  color: var(--color-penn-red);
+  font-weight: 900;
+}
+
+section.repo p.repo-desc {
+  font-size: 1rem;
+}
+
+section.repo section.repo-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+section.repo section.repo-header img.avatar {
+  width: 12%;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid var(--color-penn-red);
+}
+
+section.has {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+section.has ul.booleans {
+  display: flex;
+  gap: 0.2rem;
+  font-size: 1.4rem;
+}
+
+ul.booleans .item-true {
+  color: var(--color-penn-red)
+}
+
+aside.info ul.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  max-height: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  width: 70%;
+  margin-left: auto;
+}
+
+li.topic {
+  background: var(--color-slate-gray);
+  height: 1.25rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-mint-cream);
+}

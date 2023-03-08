@@ -5,7 +5,7 @@
   --color-eerie-black: #222222;
   --color-penn-red: #960200;
   --color-mint-cream: #f2f7f2;
-  --color-gray: #7c7a7a;
+  --color-gray: #333;
   --color-slate-gray: #7d8491;
 }
 
@@ -15,7 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: var(--color-eerie-black);
+  background: #000;
 }
 
 main {
