@@ -14,7 +14,7 @@ export default function App() {
       {!showGame && (
         <>
           <strong>GitCombat</strong>
-          <p>A pair of random GitHub repositories against each other, you guess which one has more stars using your knowledge of programming languages and open source projects.</p>
+          <p>A pair of random GitHub repositories put against each other, guess which one has more stars using your open source projects knowledge</p>
           {repos.length == 0 ? (
             <p className='pulsate-bck'>Loading...</p>
           ) : (
