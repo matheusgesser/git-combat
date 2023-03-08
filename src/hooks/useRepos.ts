@@ -15,9 +15,15 @@ async function fetchRepos( amount:number, setters:Dispatch<SetStateAction<any[]>
   setters.forEach(setter => setter(res.data.items))
 }
 
-export default function useRepos(amount:number) {
-  const [allRepos, setAllRepos] = useState<any>([])
-  const [repositories, setRepositories] = useState<any>([])
+type UseReposReturnType = [
+  repositories: Repo[],
+  setRepositories: Dispatch<SetStateAction<Repo[]>>,
+  allRepos: Repo[]
+]
+
+export default function useRepos(amount:number): UseReposReturnType {
+  const [allRepos, setAllRepos] = useState<Repo[]>([])
+  const [repositories, setRepositories] = useState<Repo[]>([])
 
   useEffect(() => {
     fetchRepos(amount, [setAllRepos, setRepositories])
