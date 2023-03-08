@@ -13,7 +13,7 @@ export default function App() {
     <main>
       {!showGame && (
         <>
-          <strong className='floating'>GitCombat</strong>
+          <strong>GitCombat</strong>
           <p>A pair of random GitHub repositories against each other, you guess which one has more stars using your knowledge of programming languages and open source projects.</p>
           {repos.length == 0 ? (
             <p className='pulsate-bck'>Loading...</p>
