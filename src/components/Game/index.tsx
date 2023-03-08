@@ -1,5 +1,4 @@
 import React, { ReactComponentElement, useEffect, useState } from 'react'
-import './styles.jsx'
 
 interface GameProps {
   repoState: [Repo[],React.Dispatch<React.SetStateAction<Repo[]>>]
