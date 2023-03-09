@@ -122,7 +122,10 @@ section .buttons {
   section.repo {
     width: 100%;
   }
+
   section.repos section.container {
     flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
   }
 }

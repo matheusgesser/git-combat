@@ -21,7 +21,7 @@ section.repo h2.repo-title {
   text-shadow: 1px 1px #000;
 }
 
-section.repo h2.repo-title > strong {
+section.repo h2.repo-title>strong {
   font-size: 2rem;
   color: var(--color-penn-red);
   font-weight: 900;
@@ -86,6 +86,20 @@ li.topic {
 
 @media (max-width:800px) {
   section.repo {
+    padding: 1rem;
     width: 100%;
+    gap: 1rem;
+  }
+
+  section.repo h2.repo-title {
+    font-size: 1rem;
+  }
+
+  section.repo h2.repo-title>strong {
+    font-size: 1.5rem;
+  }
+
+  section.has ul.booleans {
+    font-size: 1rem;
   }
 }
