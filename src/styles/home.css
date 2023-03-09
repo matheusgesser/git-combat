@@ -6,20 +6,12 @@ main strong.title {
   transition: 0.3s;
 }
 
-main strong.title:hover {
-  transform: scale(1.1);
-}
-
 main p.description {
   width: 50vw;
   text-align: center;
   font-size: 1.5rem;
   opacity: 0.7;
   transition: 0.3s;
-}
-
-main p.description:hover {
-  transform: scale(1.05);
 }
 
 main p.loading {
@@ -41,23 +33,57 @@ main button.play-btn {
   transition: 0.3s;
 }
 
-main button.play-btn:hover {
-  transform: scale(1.2);
+.floatnoskew {
+  animation: floatnoskew infinite 3s ease-in-out;
 }
 
-main:nth-child(1) {
+.float {
   animation: float infinite 3s ease-in-out;
+}
+
+.invertfloat {
+  animation: invertfloat infinite 3s ease-in-out;
+}
+
+@keyframes floatnoskew {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes float {
   0% {
     transform: translateY(0) skewY(-3deg);
   }
+
   50% {
     transform: translateY(-15px) skewY(-3deg);
   }
+
   100% {
     transform: translateY(0) skewY(-3deg);
+  }
+}
+
+@keyframes invertfloat {
+  0% {
+    transform: translateY(0) skewY(3deg);
+  }
+
+  50% {
+    transform: translateY(-15px) skewY(3deg);
+  }
+
+  100% {
+    transform: translateY(0) skewY(3deg);
   }
 }
 

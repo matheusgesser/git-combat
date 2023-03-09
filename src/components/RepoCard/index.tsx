@@ -7,13 +7,14 @@ import { truncate } from '../../utils'
 import './repocard.css'
 
 interface RepoCardProps {
+  number: number
   content: Repo
   handler: (r: Repo) => void
 }
 
-const RepoCard: React.FC<RepoCardProps> = ({ content, handler }) => {
+const RepoCard: React.FC<RepoCardProps> = ({ number, content, handler }) => {
   return (
-    <section className='repo' onClick={() => handler(content)}>
+    <section className={number == 1 ? 'repo invertfloat' : 'repo float'} onClick={() => handler(content)}>
       <section className="repo-header">
         <img className='avatar' src={content.owner.avatar_url} />
         <h2 className='repo-title'>

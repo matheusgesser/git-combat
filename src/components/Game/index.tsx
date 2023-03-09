@@ -69,7 +69,7 @@ const Game: React.FC<GameProps> = ({ repoState, originalList, setShowGame }) => 
     <section className='game'>
       {over ? (
         <section className='score'>
-          <section className='container'>
+          <section className='container floatnoskew'>
             <p className='text'>Final Score:</p>
             <section className='result correct'>
               <p>{correct}</p>
@@ -86,17 +86,17 @@ const Game: React.FC<GameProps> = ({ repoState, originalList, setShowGame }) => 
         repo1 &&
         repo2 && (
           <section className="repos">
-            <h4>Round {round}</h4>
-            <h1 className='title'>
+            <h4 className='floatnoskew'>Round {round}</h4>
+            <h1 className='title floatnoskew'>
               Which one wins the star battle?
             </h1>
             <section className='container'>
 
-              <RepoCard content={repo1} handler={handleChoice} />
+              <RepoCard number={1} content={repo1} handler={handleChoice} />
 
-              <span className='versus'>VS</span>
+              <span className='versus floatnoskew'>VS</span>
 
-              <RepoCard content={repo2} handler={handleChoice} />
+              <RepoCard number={2} content={repo2} handler={handleChoice} />
 
             </section>
 
