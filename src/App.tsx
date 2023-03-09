@@ -6,8 +6,8 @@ import './styles/base.css'
 import './styles/home.css'
 import './styles/animations.css'
 
-import correctAnswerAudio from './assets/correct-answer.wav'
-import wrongAnswerAudio from './assets/wrong-answer.wav'
+import hitSound from './assets/hit.wav'
+import hitSound2 from './assets/hit2.wav'
 
 export default function App() {
   const [showGame, setShowGame] = useState<boolean>(false)
@@ -40,8 +40,8 @@ export default function App() {
             originalList={allRepos}
             setShowGame={setShowGame} />
         )}
-        <audio id='correct-answer-audio' src={correctAnswerAudio} ></audio>
-        <audio id='wrong-answer-audio' src={wrongAnswerAudio} ></audio>
+        <audio id='hit-sound' src={hitSound} ></audio>
+        <audio id='hit-sound-2' src={hitSound2} ></audio>
       </main>
     </>
   )
