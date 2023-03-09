@@ -4,12 +4,12 @@ import RepoCard from '../RepoCard'
 import './game.css'
 
 interface GameProps {
-  repoState: [Repo[],React.Dispatch<React.SetStateAction<Repo[]>>]
+  repoState: [Repo[], React.Dispatch<React.SetStateAction<Repo[]>>]
   originalList: Repo[]
   setShowGame: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Game: React.FC<GameProps> = ({repoState, originalList, setShowGame}) => {
+const Game: React.FC<GameProps> = ({ repoState, originalList, setShowGame }) => {
 
   const [repositories, setRepositories] = repoState
   const [over, setOver] = useState<boolean>(false)
@@ -24,6 +24,7 @@ const Game: React.FC<GameProps> = ({repoState, originalList, setShowGame}) => {
     if (arr.length < 2) {
       setRepositories(originalList)
       setOver(true)
+      setRound(1)
       return
     }
     function getRandomIndex() {
@@ -46,20 +47,21 @@ const Game: React.FC<GameProps> = ({repoState, originalList, setShowGame}) => {
     randomSelect(repositories)
   }, [])
 
-  function handleChoice(r:Repo) {
+  function handleChoice(r: Repo) {
     const chosenRepo = r.id === repo1?.id ? repo1 : repo2
     const winner = repo1?.stargazers_count! > repo2?.stargazers_count! ? repo1 : repo2
 
     if (chosenRepo?.id == winner?.id) {
-      setCorrect(prev => prev+1)
+      setCorrect(prev => prev + 1)
       document.getElementsByTagName('audio')[0].currentTime = 0
       document.getElementsByTagName('audio')[0].play()
     } else {
-      setIncorrect(prev => prev+1)
+      setIncorrect(prev => prev + 1)
       document.getElementsByTagName('audio')[1].currentTime = 0
       document.getElementsByTagName('audio')[1].play()
     }
-    
+
+    setRound(prev => prev + 1)
     randomSelect(repositories)
   }
 
@@ -67,19 +69,19 @@ const Game: React.FC<GameProps> = ({repoState, originalList, setShowGame}) => {
     <section className='game'>
       {over ? (
         <section className='score'>
-        <section className='container'>
-          <p className='text'>Final Score:</p>
-          <section className='result correct'>
-            <p>{correct}</p>
-            <FaCheckCircle />
+          <section className='container'>
+            <p className='text'>Final Score:</p>
+            <section className='result correct'>
+              <p>{correct}</p>
+              <FaCheckCircle />
+            </section>
+            <section className='result wrong'>
+              <p>{incorrect}</p>
+              <FaTimesCircle />
+            </section>
           </section>
-          <section className='result wrong'>
-            <p>{incorrect}</p>
-            <FaTimesCircle />
-          </section>
+          <button className='play-btn' onClick={() => setShowGame(false)}>BACK</button>
         </section>
-        <button className='play-btn' onClick={() => setShowGame(false)}>BACK</button>
-      </section>
       ) : (
         repo1 &&
         repo2 && (
@@ -90,11 +92,11 @@ const Game: React.FC<GameProps> = ({repoState, originalList, setShowGame}) => {
             </h1>
             <section className='container'>
 
-                <RepoCard content={repo1} handler={handleChoice} />
+              <RepoCard content={repo1} handler={handleChoice} />
 
-                <span className='versus'>VS</span>
+              <span className='versus'>VS</span>
 
-                <RepoCard content={repo2} handler={handleChoice} />
+              <RepoCard content={repo2} handler={handleChoice} />
 
             </section>
 

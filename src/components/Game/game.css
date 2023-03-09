@@ -18,13 +18,15 @@ section.game section.repos {
   max-height: 80%;
   width: 100%;
   padding: 1rem;
+  color: var(--color-penn-red);
+  text-shadow: 1px 1px #333;
 }
 
 section.game h1.title {
   font-size: 1.6rem;
   font-size: clamp(1.5rem, 3vw, 5vw);
   overflow-wrap: break-word;
-  color: var(--color-penn-red);
+  color: var(--color-mint-cream);
   font-weight: 500;
   text-shadow: 2px 2px 5px #111;
   text-align: center;
