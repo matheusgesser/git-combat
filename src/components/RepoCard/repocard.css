@@ -19,6 +19,7 @@ section.repo h2.repo-title {
   font-size: 1.5rem;
   color: var(--color-mint-cream);
   text-shadow: 1px 1px #000;
+  word-break: break-word;
 }
 
 section.repo h2.repo-title>strong {
@@ -30,6 +31,7 @@ section.repo h2.repo-title>strong {
 section.repo p.repo-desc {
   font-size: 1rem;
   text-shadow: 1px 1px #000;
+  color: var(--color-mint-cream)
 }
 
 section.repo section.repo-header {
