@@ -1,4 +1,4 @@
-# Git Combat 💥
+# 💥 GitCombat
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/matheusgesser/gitcombat?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/matheusgesser/gitcombat?style=for-the-badge)
