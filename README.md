@@ -10,7 +10,7 @@
 
 > Adivinhe, através de um duelo de repositórios, qual possui mais estrelas.
 
-**Acesse: <a href="https://gitcombat.netlify.app/" target='_blank'>https://gitcombat.netlify.app/</a>**
+**Acesse: <a href="https://gitcombat.netlify.app/" target='_blank'>gitcombat.netlify.app</a>**
 
 ## 💻 **Tecnologias**
 
