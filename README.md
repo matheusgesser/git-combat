@@ -6,13 +6,13 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/matheusgesser/gitcombat?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/matheusgesser/gitcombat?style=for-the-badge)
 
-<img src="https://i.imgur.com/Sj1dZnM.png" alt="Imagem demonstrativa Desktop">
+<img src="https://i.imgur.com/Sj1dZnM.png" alt="Demo image">
 
-> Adivinhe, através de um duelo de repositórios, qual possui mais estrelas.
+> Guess, throught a repository battle, which one has more stars.
 
-**Acesse: <a href="https://gitcombat.netlify.app/" target='_blank'>gitcombat.netlify.app</a>**
+**Try it: <a href="https://gitcombat.netlify.app/" target='_blank'>gitcombat.netlify.app</a>**
 
-## 💻 **Tecnologias**
+## 💻 **Technologies**
 
 <img src='https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white' /> <img src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB' /> <img src='https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white' />
 <br>
