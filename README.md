@@ -10,7 +10,9 @@
 
 > Guess, throught a repository battle, which one has more stars.
 
-**Try it: <a href="https://gitcombat.netlify.app/" target='_blank'>gitcombat.netlify.app</a>**
+## 🔴 **Live Version**
+
+**<a href="https://gitcombat.netlify.app/">gitcombat.netlify.app</a>**
 
 ## 💻 **Technologies**
 
